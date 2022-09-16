@@ -12,20 +12,22 @@
 </head>
 <body>
     <div class="container">
+      
         <div class="container-grid">
 
             <div class="card-jupiter">
                 <div class="card-body">
-                    <img class="card-img-jupiter" src="./src/img/planets/jupiter.png" alt="Jupiter">
+                   
+                    <img class="card-img-jupiter card-rw" src="./src/img/planets/jupiter.png" alt="Jupiter">
                     <h2 class="card-name">jupiter</h2>
                     <div class="card-result">
                         <h3>Tu peso:</h3>
                         <p class="result"><span id="resultJupiter"></span></p>
                     </div>
                     <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input" placeholder="Introduce tu peso:" id="input-jupiter" onclick="clear()"
-                            type="number" required>
-                        <button class="card-btn" id="clear-btn" onclick="calcPesoJupiter()" type="reset">Calcular</button>
+                        <input class="card-input input-jupiter" placeholder="Introduce tu peso:" 
+                            type="number"required>
+                        <button class="card-btn btn-jpt" type="reset">Calcular</button>
                     </form>
                 </div>
             </div>
@@ -39,9 +41,9 @@
                         <p class="result"><span id="resultMercurio"></span></p>
                     </div>
                     <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input" placeholder="Introduce tu peso:" id="input-mercurio" onclick="clear()"
+                        <input class="card-input input-mercurio" placeholder="Introduce tu peso:" 
                             type="number" required>
-                        <button class="card-btn" id="clear-btn" onclick="calcPesoMercurio()" type="reset">Calcular</button>
+                        <button class="card-btn btn-mer" type="reset">Calcular</button>
                     </form>
                 </div>
             </div>
@@ -57,9 +59,9 @@
                         <p class="result"><span id="resultNeptuno"></span></p>
                     </div>
                     <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input" placeholder="Introduce tu peso:" id="input-neptuno" onclick="clear()" type="number"required>
+                        <input class="card-input input-neptuno" placeholder="Introduce tu peso:" type="number"required>
                         
-                        <button class="card-btn" id="clear-btn" onclick="calcPesoNeptuno()" type="reset">Calcular</button>
+                        <button class="card-btn btn-nep" type="reset">Calcular</button>
                     </form>
                 </div>
             </div>
@@ -73,10 +75,10 @@
                         <p class="result"><span id="resultSaturno"></span></p>
                     </div>
                     <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input" placeholder="Introduce tu peso:" id="input-saturno" onclick="clear()"
+                        <input class="card-input input-saturno" placeholder="Introduce tu peso:"
                         type="number" required>
                         
-                        <button class="card-btn" id="clear-btn" onclick="calcPesoSaturno()" type="reset">Calcular</button>
+                        <button class="card-btn btn-sat" type="reset">Calcular</button>
                     </form>
                 </div>
             </div>
@@ -90,9 +92,9 @@
                         <p class="result"><span id="resultMarte"></span></p>
                     </div>
                     <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input" placeholder="Introduce tu peso:" id="input-marte" onclick="clear()"
+                        <input class="card-input input-marte" placeholder="Introduce tu peso:" 
                             type="number" required>
-                        <button class="card-btn" id="clear-btn" onclick="calcPesoMarte()" type="reset">Calcular</button>
+                        <button class="card-btn btn-mart"  type="reset">Calcular</button>
                     </form>
                 </div>
             </div>
@@ -106,28 +108,14 @@
                         <p class="result"><span id="resultUrano"></span></p>
                     </div>
                     <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input" placeholder="Introduce tu peso:" id="input-urano" onclick="clear()" type="number"
+                        <input class="card-input input-urano" placeholder="Introduce tu peso:" type="number"
                             required>
-                        <button class="card-btn" id="clear-btn" onclick="calcPesoUrano()" type="reset">Calcular</button>
+                        <button class="card-btn btn-ura"  type="reset">Calcular</button>
                     </form>
                 </div>
             </div>
 
-            <div class="card-tierra">
-                <div class="card-body">
-                    <img class="card-img-tierra" src="./src/img/planets/tierra.png" alt="Tierra">
-                    <h2 class="card-name">Tierra</h2>
-                    <div class="card-result">
-                        <h3>Tu peso:</h3>
-                        <p class="result"><span id="resultTierra"></span></p>
-                    </div>
-                    <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input" placeholder="Introduce tu peso:" id="input-tierra" onclick="clear()" type="number"
-                            required>
-                        <button class="card-btn" id="clear-btn" onclick="calcPesoTierra()" type="reset">Calcular</button>
-                    </form>
-                </div>
-            </div>
+            
 
             <div class="card-venus">
                     <div class="card-body">
@@ -138,9 +126,9 @@
                             <p class="result"><span id="resultVenus"></span></p>
                         </div>
                         <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                            <input class="card-input" placeholder="Introduce tu peso:" id="input-venus" onclick="clear()" type="number"
+                            <input class="card-input input-venus" placeholder="Introduce tu peso:" id="input-venus" type="number"
                                 required>
-                            <button class="card-btn" id="clear-btn" onclick="calcPesoVenus()" type="reset">Calcular</button>
+                            <button class="card-btn btn-ven" type="reset">Calcular</button>
                         </form>
                     </div>
             </div>
@@ -154,9 +142,9 @@
                         <p class="result"><span id="resultSol"></span></p>
                     </div>
                     <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input" placeholder="Introduce tu peso:" id="input-sol" onclick="clear()" type="number"
+                        <input class="card-input input-sol" placeholder="Introduce tu peso:" type="number"
                             required>
-                        <button class="card-btn" id="clear-btn" onclick="calcPesoSol()" type="reset">Calcular</button>
+                        <button class="card-btn btn-sun"  type="reset">Calcular</button>
                     </form>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 // Gravedad en planetas
+//  Peso Usuario * gMarte / gTierra = peso en marte 
 
 const gTierra = 9.8;
 const gMercurio = 3.7;
@@ -13,27 +14,58 @@ const gSol = 274;
 
 
 
-// Mi peso 85 * gMarte / gTierra = peso en marte (Algoritmo para sacar el peso)
+const btnJup = document.querySelector('.btn-jpt');
+btnJup.addEventListener('click', calcPesoJupiter);
+
+const btnMer = document.querySelector('.btn-mer');
+btnMer.addEventListener('click', calcPesoMercurio);
+
+const btnNep = document.querySelector('.btn-nep');
+btnNep.addEventListener('click', calcPesoNeptuno);
+
+const btnSat = document.querySelector('.btn-sat');
+btnSat.addEventListener('click', calcPesoSaturno);
+
+const btnMart = document.querySelector('.btn-mart');
+btnMart.addEventListener('click', calcPesoMarte);
+
+const btnUra = document.querySelector('.btn-ura');
+btnUra.addEventListener('click', calcPesoUrano);
+
+const btnVen = document.querySelector('.btn-ven');
+btnVen.addEventListener('click', calcPesoVenus);
+
+const btnSun = document.querySelector('.btn-sun');
+btnSun.addEventListener('click', calcPesoSol);
+
 
 
 // Funciones por planetas -
 
 
-function calcPesoJupiter() {
 
+
+function calcPesoJupiter() {
+    
     function jupiter(pesoInicial) {
         const pesoTotal = pesoInicial * gJupiter / gTierra;
         return pesoTotal
     }
-
-    const input = document.getElementById('input-jupiter');
+    
+    const input = document.querySelector('.input-jupiter');
     const value = input.value;
 
     let pesoFinal = jupiter(value);
     pesoFinal = parseInt(pesoFinal);
 
     resultJupiter.textContent = `${pesoFinal}KG`;
+    
 }
+
+
+
+    
+    
 
 
 function calcPesoMercurio() {
@@ -43,29 +75,13 @@ function calcPesoMercurio() {
         return pesoTotal
     }
 
-    const input = document.getElementById('input-mercurio');
+    const input = document.querySelector('.input-mercurio');
     const value = input.value;
 
     let pesoFinal = mercurio(value);
     pesoFinal = parseInt(pesoFinal);
 
     resultMercurio.textContent = `${pesoFinal}KG`;
-}
-
-function calcPesoMarte() {
-
-    function marte(pesoInicial) {
-        const pesoTotal = pesoInicial * gMarte / gTierra;
-        return pesoTotal
-    }
-
-    const input = document.getElementById('input-marte');
-    const value = input.value;
-
-    let pesoFinal = marte(value);
-    pesoFinal = parseInt(pesoFinal);
-
-    resultMarte.textContent = `${pesoFinal}KG`;
 }
 
 function calcPesoNeptuno() {
@@ -75,7 +91,7 @@ function calcPesoNeptuno() {
         return pesoTotal
     }
 
-    const input = document.getElementById('input-neptuno');
+    const input = document.querySelector('.input-neptuno');
     const value = input.value;
 
     let pesoFinal = neptuno(value);
@@ -91,7 +107,7 @@ function calcPesoSaturno() {
         return pesoTotal
     }
 
-    const input = document.getElementById('input-saturno');
+    const input = document.querySelector('.input-saturno');
     const value = input.value;
 
     let pesoFinal = saturno(value);
@@ -100,6 +116,26 @@ function calcPesoSaturno() {
     resultSaturno.textContent = `${pesoFinal}KG`;
 }
 
+function calcPesoMarte() {
+
+    function marte(pesoInicial) {
+        const pesoTotal = pesoInicial * gMarte / gTierra;
+        return pesoTotal
+    }
+
+    const input = document.querySelector('.input-marte');
+    const value = input.value;
+
+    let pesoFinal = marte(value);
+    pesoFinal = parseInt(pesoFinal);
+
+    resultMarte.textContent = `${pesoFinal}KG`;
+}
+
+
+
+
+
 function calcPesoUrano() {
 
     function urano(pesoInicial) {
@@ -107,30 +143,13 @@ function calcPesoUrano() {
         return pesoTotal
     }
 
-    const input = document.getElementById('input-urano');
+    const input = document.querySelector('.input-urano');
     const value = input.value;
 
     let pesoFinal = urano(value);
     pesoFinal = parseInt(pesoFinal);
 
     resultUrano.textContent = `${pesoFinal}KG`;
-}
-
-function calcPesoTierra() {
-
-    function tierra(pesoInicial) {
-        const pesoTotal = pesoInicial * gTierra / gTierra;
-        return pesoTotal
-    }
-
-    const input = document.getElementById('input-tierra');
-    const value = input.value;
-    
-
-    let pesoFinal = tierra(value);
-    pesoFinal = parseInt(pesoFinal);
-
-    resultTierra.textContent = `${pesoFinal}KG`;
 }
 
 function calcPesoVenus() {
@@ -140,7 +159,7 @@ function calcPesoVenus() {
         return pesoTotal
     }
 
-    const input = document.getElementById('input-venus');
+    const input = document.querySelector('.input-venus');
     const value = input.value;
 
 
@@ -150,6 +169,10 @@ function calcPesoVenus() {
     resultVenus.textContent = `${pesoFinal}KG`;
 }
 
+
+
+
+
 function calcPesoSol() {
 
     function sol(pesoInicial) {
@@ -157,7 +180,7 @@ function calcPesoSol() {
         return pesoTotal
     }
 
-    const input = document.getElementById('input-sol');
+    const input = document.querySelector('.input-sol');
     const value = input.value;
 
 
@@ -166,6 +189,8 @@ function calcPesoSol() {
 
     resultSol.textContent = `${pesoFinal}KG`;
 }
+
+
 
    
 

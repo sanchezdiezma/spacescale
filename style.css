@@ -17,25 +17,37 @@ html {
 
 body {
     background-image: url('./src/img/bg.jpg');
-    height: 100vh;
+    height: 100%;
+    background-size: auto;
+    background-repeat: no-repeat;
 } 
     
+
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
+
+.container-grid {
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+    
+    
+    
+    
+
+
    
 
     
-.container-grid {
-    max-width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
-}
+    
 
     
 
@@ -45,12 +57,13 @@ body {
     
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.7rem solid rgba(255, 64, 0, 0.8);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
     top: 150px;
+    
 }
+    
 
 .card-img-jupiter {
     width: 200px;
@@ -64,12 +77,12 @@ body {
 .card-mercurio {
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.7rem solid rgba(195, 195, 195, 0.8);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
     top: 150px;
 }
+    
 
 .card-img-mercurio {
     width: 200px;
@@ -83,8 +96,7 @@ body {
 .card-marte {
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.5rem solid rgba(176, 35, 0, 0.8);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
     top: 250px;
@@ -102,8 +114,7 @@ body {
 .card-neptuno {
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.5rem solid rgba(131, 135, 251, 0.8);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
     top: 150px;
@@ -121,11 +132,10 @@ body {
 .card-saturno {
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.5rem solid rgba(230, 72, 101, 0.8);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
-    top: 250px;
+    top: 150px;
 }
 
 .card-img-saturno {
@@ -141,8 +151,7 @@ body {
 .card-urano {
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.5rem solid rgb(131, 135, 251);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
     top: 250px;
@@ -160,8 +169,7 @@ body {
 .card-tierra {
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.5rem solid rgb(131, 135, 251);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
     top: 350px;
@@ -179,11 +187,10 @@ body {
 .card-venus {
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.5rem solid rgb(131, 135, 251);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
-    top: 350px;
+    top: 250px;
 }
 
 .card-img-venus {
@@ -191,17 +198,17 @@ body {
     position: relative;
     bottom: 100px;
     filter:
-        drop-shadow(3px 3px 12px rgb(4, 211, 252)) drop-shadow(3px 3px 12px rgb(179, 0, 255));
+        drop-shadow(3px 3px 12px rgb(4, 211, 252)) 
+        drop-shadow(3px 3px 12px rgb(179, 0, 255));
 }
 
 .card-sol {
     width: 300px;
     height: 450px;
-    background-color: rgba(139, 198, 236, 0.8);
-    border: 0.5rem solid rgb(131, 135, 251);
+    background-color: rgba(139, 198, 236, 0.5);
     border-radius: 2rem 2rem 1rem 1rem;
     position: relative;
-    top: 350px;
+    top: 250px;
 }
 
 .card-img-sol {
@@ -209,7 +216,8 @@ body {
     position: relative;
     bottom: 100px;
     filter:
-        drop-shadow(3px 3px 12px rgb(4, 211, 252)) drop-shadow(3px 3px 12px rgb(179, 0, 255));
+        drop-shadow(3px 3px 12px rgb(252, 4, 45)) 
+        drop-shadow(3px 3px 8px rgb(255, 174, 0));
 }
     
 
@@ -218,13 +226,16 @@ body {
 /* Generales */
 
 .card-name {
-    color: wheat;
+    color: rgb(80, 183, 252);
     background-color:rgb(5, 1, 23);
+    width: 90%;
+    border: 3px solid rgb(80, 183, 252);
     border-radius: 2rem;
-    padding: 1.8rem;
+    padding: 1.8rem ;
     font-family: 'Roboto Mono', monospace;
     font-size: 5rem;
     text-transform: uppercase;
+    text-align: center;
     position: relative;
     bottom: 85px;
     line-height: 5rem;
@@ -240,6 +251,7 @@ body {
     bottom: 70px;
     margin: 0 auto;
 }
+    
 
 .card-input {
     height: 50px;
@@ -247,12 +259,18 @@ body {
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     font-size: 1.8rem;
+    color: rgb(5, 1, 23);
     text-align: center;
     border: none;
     position: relative;
     bottom: 70px;
 }
 
+::placeholder {
+    color: rgba(5, 1, 23, 0.5);
+    
+}
+    
 .card-data {
     display: flex;
     flex-direction: column;
@@ -263,11 +281,10 @@ body {
     align-items: center;
 }
     
-
 .card-btn {
     height: 60px;
     width: 220px;
-    background-color: crimson;
+    background-color: rgb(80, 183, 252);
     border: none;
     border-radius: 0 0 1rem 1rem;
     font-family: 'Roboto Mono', monospace;
@@ -278,9 +295,12 @@ body {
     bottom: 70px;
 }
 
+    
+
+
 
 .result {
-    color: wheat;
+    color:rgb(80, 183, 252);
     font-size: 5rem;
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
@@ -294,7 +314,7 @@ body {
 }
 
 h3 {
-    color: wheat;
+    color: rgb(80, 183, 252);
     font-family: 'Roboto Mono', monospace;
     font-size: 1.8rem;
     text-align: center;
@@ -302,11 +322,6 @@ h3 {
     text-transform: uppercase;
     padding-top: 0.5rem;
 }
-
-
-
-
-
 
 .card-data input:focus {
     border: none;
@@ -317,6 +332,31 @@ h3 {
     border: none;
     outline: none;
 }
+
+.text-menu {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: aliceblue;
+    
+}
+
+
+            
+            
+            
+            
+    
+            
+    
+            
+
+
+
+
+
+
+
+
 
 
 
