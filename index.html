@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,176 +8,162 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>space scale</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Space-Scale</title>
 </head>
+
 <body>
-    <div class="container">
-      
-        <div class="container-grid">
+    <div class="hero">
+        <img src="./src/img/logo.png" alt="logo">
+    </div>
+    <div class="flex-container">
 
-            <div class="card-jupiter">
-                <div class="card-body">
-                   
-                    <img class="card-img-jupiter card-rw" src="./src/img/planets/jupiter.png" alt="Jupiter">
-                    <h2 class="card-name">jupiter</h2>
-                    <div class="card-result">
-                        <h3>Tu peso:</h3>
-                        <p class="result"><span id="resultJupiter"></span></p>
-                    </div>
-                    <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input input-jupiter" placeholder="Introduce tu peso:" 
-                            type="number"required>
-                        <button class="card-btn btn-jpt" type="reset">Calcular</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="card-mercurio">
-                <div class="card-body">
-                    <img class="card-img-mercurio" src="./src/img/planets/mercurio.png" alt="Mercurio">
-                    <h2 class="card-name">mercurio</h2>
-                    <div class="card-result">
-                        <h3>Tu peso:</h3>
-                        <p class="result"><span id="resultMercurio"></span></p>
-                    </div>
-                    <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input input-mercurio" placeholder="Introduce tu peso:" 
-                            type="number" required>
-                        <button class="card-btn btn-mer" type="reset">Calcular</button>
-                    </form>
-                </div>
-            </div>
-            
-            
-            <div class="card-neptuno">
-                <div class="card-body">
-                    <img class="card-img-neptuno" src="./src/img/planets/neptuno.png" alt="Neptuno">
-                    <h2 class="card-name">neptuno</h2>
-                    
-                    <div class="card-result">
-                        <h3>Tu peso:</h3>
-                        <p class="result"><span id="resultNeptuno"></span></p>
-                    </div>
-                    <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input input-neptuno" placeholder="Introduce tu peso:" type="number"required>
-                        
-                        <button class="card-btn btn-nep" type="reset">Calcular</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="card-saturno">
-                <div class="card-body">
-                    <img class="card-img-saturno" src="./src/img/planets/saturno.png" alt="Saturno">
-                    <h2 class="card-name">Saturno</h2>
-                    <div class="card-result">
-                        <h3>Tu peso:</h3>
-                        <p class="result"><span id="resultSaturno"></span></p>
-                    </div>
-                    <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input input-saturno" placeholder="Introduce tu peso:"
-                        type="number" required>
-                        
-                        <button class="card-btn btn-sat" type="reset">Calcular</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="card-marte">
-                <div class="card-body">
-                    <img class="card-img-marte" src="./src/img/planets/marte.png" alt="Marte">
-                    <h2 class="card-name">Marte</h2>
-                    <div class="card-result">
-                        <h3>Tu peso:</h3>
-                        <p class="result"><span id="resultMarte"></span></p>
-                    </div>
-                    <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input input-marte" placeholder="Introduce tu peso:" 
-                            type="number" required>
-                        <button class="card-btn btn-mart"  type="reset">Calcular</button>
-                    </form>
-                </div>
-            </div>
+        <!-- Cards -->
 
-            <div class="card-urano">
-                <div class="card-body">
-                    <img class="card-img-urano" src="./src/img/planets/urano.png" alt="Urano">
-                    <h2 class="card-name">Urano</h2>
-                    <div class="card-result">
-                        <h3>Tu peso:</h3>
-                        <p class="result"><span id="resultUrano"></span></p>
-                    </div>
-                    <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input input-urano" placeholder="Introduce tu peso:" type="number"
-                            required>
-                        <button class="card-btn btn-ura"  type="reset">Calcular</button>
-                    </form>
+        <!-- Jupiter -->
+
+        <div class="card-planet">
+            <div class="card-body">
+                <img class="jupiter-shadow" src="./src/img/planets/jupiter.png" alt="Jupiter">
+                <h2>jupiter</h2>
+                <div class="card-result">
+                    <h3>Tu peso:</h3>
+                    <p class="result"><span id="resultJupiter"></span></p>
                 </div>
+                <form class="card-data" action="#" method="post" accept-charset="utf-8">
+                    <input class="card-input input-jupiter" placeholder="Introduce tu peso:" type="number"
+                        name="jupiter" autofocus required>
+                    <button class="card-btn btn-jpt" type="reset">Calcular</button>
+                </form>
             </div>
-
-            
-
-            <div class="card-venus">
-                    <div class="card-body">
-                        <img class="card-img-venus" src="./src/img/planets/venus.png" alt="Venus">
-                        <h2 class="card-name">Venus</h2>
-                        <div class="card-result">
-                            <h3>Tu peso:</h3>
-                            <p class="result"><span id="resultVenus"></span></p>
-                        </div>
-                        <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                            <input class="card-input input-venus" placeholder="Introduce tu peso:" id="input-venus" type="number"
-                                required>
-                            <button class="card-btn btn-ven" type="reset">Calcular</button>
-                        </form>
-                    </div>
-            </div>
-
-            <div class="card-sol">
-                <div class="card-body">
-                    <img class="card-img-sol" src="./src/img/planets/sol.png" alt="Sol">
-                    <h2 class="card-name">sol</h2>
-                    <div class="card-result">
-                        <h3>Tu peso:</h3>
-                        <p class="result"><span id="resultSol"></span></p>
-                    </div>
-                    <form class="card-data" action="#" method="post" accept-charset="utf-8">
-                        <input class="card-input input-sol" placeholder="Introduce tu peso:" type="number"
-                            required>
-                        <button class="card-btn btn-sun"  type="reset">Calcular</button>
-                    </form>
-                </div>
-            </div>
-                    
         </div>
-                    
-                    
-                    
-                    
-                
 
-            
-       
+        <!-- Mercury -->
 
-       
+        <div class="card-planet">
+            <div class="card-body">
+                <img class="mercury-shadow" src="./src/img/planets/mercurio.png" alt="Mercurio">
+                <h2 class="card-name">mercurio</h2>
+                <div class="card-result">
+                    <h3>Tu peso:</h3>
+                    <p class="result"><span id="resultMercury"></span></p>
+                </div>
+                <form class="card-data" action="#" method="post" accept-charset="utf-8">
+                    <input class="card-input input-mercury" placeholder="Introduce tu peso:" type="number" required>
+                    <button class="card-btn btn-mer" type="reset">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Neptune -->
+
+        <div class="card-planet">
+            <div class="card-body">
+                <img class="neptune-shadow" src="./src/img/planets/neptuno.png" alt="Neptuno">
+                <h2 class="card-name">neptuno</h2>
+
+                <div class="card-result">
+                    <h3>Tu peso:</h3>
+                    <p class="result"><span id="resultNeptune"></span></p>
+                </div>
+                <form class="card-data" action="#" method="post" accept-charset="utf-8">
+                    <input class="card-input input-neptune" placeholder="Introduce tu peso:" type="number" required>
+
+                    <button class="card-btn btn-nep" type="reset">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Saturn -->
+
+        <div class="card-planet">
+            <div class="card-body">
+                <img class="img-saturn saturn-shadow" src="./src/img/planets/saturno.png" alt="Saturno">
+                <h2 class="card-name">Saturno</h2>
+                <div class="card-result">
+                    <h3>Tu peso:</h3>
+                    <p class="result"><span id="resultSaturn"></span></p>
+                </div>
+                <form class="card-data" action="#" method="post" accept-charset="utf-8">
+                    <input class="card-input input-saturn" placeholder="Introduce tu peso:" type="number" required>
+
+                    <button class="card-btn btn-sat" type="reset">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Mars -->
+
+        <div class="card-planet">
+            <div class="card-body">
+                <img class="mars-shadow" src="./src/img/planets/marte.png" alt="Marte">
+                <h2 class="card-name">Marte</h2>
+                <div class="card-result">
+                    <h3>Tu peso:</h3>
+                    <p class="result"><span id="resultMars"></span></p>
+                </div>
+                <form class="card-data" action="#" method="post" accept-charset="utf-8">
+                    <input class="card-input input-mars" placeholder="Introduce tu peso:" type="number" required>
+                    <button class="card-btn btn-mart" type="reset">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Uranus -->
+
+        <div class="card-planet">
+            <div class="card-body">
+                <img class="img-uranus uranus-shadow" src="./src/img/planets/urano.png" alt="Urano">
+                <h2 class="card-name">Urano</h2>
+                <div class="card-result">
+                    <h3>Tu peso:</h3>
+                    <p class="result"><span id="resultUranus"></span></p>
+                </div>
+                <form class="card-data" action="#" method="post" accept-charset="utf-8">
+                    <input class="card-input input-uranus" placeholder="Introduce tu peso:" type="number" required>
+                    <button class="card-btn btn-ura" type="reset">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Venus -->
+
+        <div class="card-planet">
+            <div class="card-body">
+                <img class="venus-shadow" src="./src/img/planets/venus.png" alt="Venus">
+                <h2 class="card-name">Venus</h2>
+                <div class="card-result">
+                    <h3>Tu peso:</h3>
+                    <p class="result"><span id="resultVenus"></span></p>
+                </div>
+                <form class="card-data" action="#" method="post" accept-charset="utf-8">
+                    <input class="card-input input-venus" placeholder="Introduce tu peso:" id="input-venus"
+                        type="number" required>
+                    <button class="card-btn btn-ven" type="reset">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sol -->
+
+        <div class="card-planet">
+            <div class="card-body">
+                <img class="sun-shadow" src="./src/img/planets/sol.png" alt="Sol">
+                <h2 class="card-name">sol</h2>
+                <div class="card-result">
+                    <h3>Tu peso:</h3>
+                    <p class="result"><span id="resultSun"></span></p>
+                </div>
+                <form class="card-data" action="#" method="post" accept-charset="utf-8">
+                    <input class="card-input input-sun" placeholder="Introduce tu peso:" type="number" required>
+                    <button class="card-btn btn-sun" type="reset">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+
     </div>
     <script src="./scripts.js"></script>
 </body>
+
 </html>
-                
-
-                   
-
-
-
-           
-
-                        
-                        
-    
-               
-        
-
-
-        
