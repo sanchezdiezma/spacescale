@@ -7,7 +7,6 @@ const gravityJupiter = 28.4;
 const gravitySaturn = 10.44;
 const gravityUranus = 8.7;
 const gravityNeptune = 11.15;
-const gravityPluto = 0.62;
 const gravitySun = 274;
 
 // Jupiter function
@@ -23,30 +22,32 @@ function calcWeightJupiter() {
     }
 
     const input = document.querySelector('.input-jupiter');
-    const value = input.value;
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+        document.getElementById('resultJupiter').textContent = '---';
+        return;
+    }
     let result = jupiter(value);
-
     result = parseInt(result);
-    resultJupiter.textContent = `${result}KG`;
+    document.getElementById('resultJupiter').textContent = `${result}KG`;
 }
 
 const inputJupiter = document.querySelector('.input-jupiter');
 const placeholderJupiter = inputJupiter.getAttribute('placeholder');
 
-
 inputJupiter.addEventListener('input', function (event) {
-    // Eliminar cualquier carácter no numérico del valor ingresado
     event.target.value = event.target.value.replace(/[^0-9]/g, '');
-
-    // Limitar el valor a una longitud máxima de 4 dígitos
     if (event.target.value.length > 4) {
         event.target.value = event.target.value.slice(0, 4);
     }
 });
 
 inputJupiter.addEventListener('focus', function (event) {
-    // Cuando el campo de entrada obtiene el enfoque, se borra el placeholder
     event.target.removeAttribute('placeholder');
+});
+
+inputJupiter.addEventListener('blur', function (event) {
+    event.target.setAttribute('placeholder', placeholderJupiter);
 });
 
 
@@ -63,30 +64,32 @@ function calcWeightMercury() {
     }
 
     const input = document.querySelector('.input-mercury');
-    const value = input.value;
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+        document.getElementById('resultMercury').textContent = '---';
+        return;
+    }
     let result = mercury(value);
-
     result = parseInt(result);
-    resultMercury.textContent = `${result}KG`;
+    document.getElementById('resultMercury').textContent = `${result}KG`;
 }
 
 const inputMercury = document.querySelector('.input-mercury');
 const placeholderMercury = inputMercury.getAttribute('placeholder');
 
-
 inputMercury.addEventListener('input', function (event) {
-    // Eliminar cualquier carácter no numérico del valor ingresado
     event.target.value = event.target.value.replace(/[^0-9]/g, '');
-
-    // Limitar el valor a una longitud máxima de 4 dígitos
     if (event.target.value.length > 4) {
         event.target.value = event.target.value.slice(0, 4);
     }
 });
 
 inputMercury.addEventListener('focus', function (event) {
-    // Cuando el campo de entrada obtiene el enfoque, se borra el placeholder
     event.target.removeAttribute('placeholder');
+});
+
+inputMercury.addEventListener('blur', function (event) {
+    event.target.setAttribute('placeholder', placeholderMercury);
 });
 
 
@@ -99,41 +102,42 @@ function calcWeightNeptune() {
 
     function neptune(initialWeight) {
         const totalWeight = initialWeight * gravityNeptune / gravityEarth;
-        return totalWeight
+        return totalWeight;
     }
 
     const input = document.querySelector('.input-neptune');
-    const value = input.value;
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+        document.getElementById('resultNeptune').textContent = '---';
+        return;
+    }
     let result = neptune(value);
-
     result = parseInt(result);
-    resultNeptune.textContent = `${result}KG`;
+    document.getElementById('resultNeptune').textContent = `${result}KG`;
 }
 
 const inputNeptune = document.querySelector('.input-neptune');
 const placeholderNeptune = inputNeptune.getAttribute('placeholder');
 
-
 inputNeptune.addEventListener('input', function (event) {
-    // Eliminar cualquier carácter no numérico del valor ingresado
     event.target.value = event.target.value.replace(/[^0-9]/g, '');
-
-    // Limitar el valor a una longitud máxima de 4 dígitos
     if (event.target.value.length > 4) {
         event.target.value = event.target.value.slice(0, 4);
     }
 });
 
 inputNeptune.addEventListener('focus', function (event) {
-    // Cuando el campo de entrada obtiene el enfoque, se borra el placeholder
     event.target.removeAttribute('placeholder');
+});
+
+inputNeptune.addEventListener('blur', function (event) {
+    event.target.setAttribute('placeholder', placeholderNeptune);
 });
 
 // Saturn function
 
 const btnSaturn = document.querySelector('.btn-sat');
 btnSaturn.addEventListener('click', calcWeightSaturn);
-
 
 function calcWeightSaturn() {
 
@@ -143,36 +147,37 @@ function calcWeightSaturn() {
     }
 
     const input = document.querySelector('.input-saturn');
-    const value = input.value;
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+        document.getElementById('resultSaturn').textContent = '---';
+        return;
+    }
     let result = saturn(value);
-
     result = parseInt(result);
-    resultSaturn.textContent = `${result}KG`;
+    document.getElementById('resultSaturn').textContent = `${result}KG`;
 }
 
 const inputSaturn = document.querySelector('.input-saturn');
-const placeholderSaturn = inputNeptune.getAttribute('placeholder');
-
+const placeholderSaturn = inputSaturn.getAttribute('placeholder');  // fix: era inputNeptune
 
 inputSaturn.addEventListener('input', function (event) {
-    // Eliminar cualquier carácter no numérico del valor ingresado
     event.target.value = event.target.value.replace(/[^0-9]/g, '');
-
-    // Limitar el valor a una longitud máxima de 4 dígitos
     if (event.target.value.length > 4) {
         event.target.value = event.target.value.slice(0, 4);
     }
 });
 
 inputSaturn.addEventListener('focus', function (event) {
-    // Cuando el campo de entrada obtiene el enfoque, se borra el placeholder
     event.target.removeAttribute('placeholder');
+});
+
+inputSaturn.addEventListener('blur', function (event) {
+    event.target.setAttribute('placeholder', placeholderSaturn);
 });
 
 // Mars function
 const btnMars = document.querySelector('.btn-mart');
 btnMars.addEventListener('click', calcWeightMars);
-
 
 function calcWeightMars() {
 
@@ -182,36 +187,37 @@ function calcWeightMars() {
     }
 
     const input = document.querySelector('.input-mars');
-    const value = input.value;
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+        document.getElementById('resultMars').textContent = '---';
+        return;
+    }
     let result = mars(value);
-
     result = parseInt(result);
-    resultMars.textContent = `${result}KG`;
+    document.getElementById('resultMars').textContent = `${result}KG`;
 }
 
 const inputMars = document.querySelector('.input-mars');
-const placeholderMars = inputNeptune.getAttribute('placeholder');
-
+const placeholderMars = inputMars.getAttribute('placeholder');  // fix: era inputNeptune
 
 inputMars.addEventListener('input', function (event) {
-    // Eliminar cualquier carácter no numérico del valor ingresado
     event.target.value = event.target.value.replace(/[^0-9]/g, '');
-
-    // Limitar el valor a una longitud máxima de 4 dígitos
     if (event.target.value.length > 4) {
         event.target.value = event.target.value.slice(0, 4);
     }
 });
 
 inputMars.addEventListener('focus', function (event) {
-    // Cuando el campo de entrada obtiene el enfoque, se borra el placeholder
     event.target.removeAttribute('placeholder');
+});
+
+inputMars.addEventListener('blur', function (event) {
+    event.target.setAttribute('placeholder', placeholderMars);
 });
 
 // Uranus Function
 const btnUranus = document.querySelector('.btn-ura');
 btnUranus.addEventListener('click', calcWeightUranus);
-
 
 function calcWeightUranus() {
 
@@ -221,69 +227,72 @@ function calcWeightUranus() {
     }
 
     const input = document.querySelector('.input-uranus');
-    const value = input.value;
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+        document.getElementById('resultUranus').textContent = '---';
+        return;
+    }
     let result = uranus(value);
-
     result = parseInt(result);
-    resultUranus.textContent = `${result}KG`;
+    document.getElementById('resultUranus').textContent = `${result}KG`;
 }
 
 const inputUranus = document.querySelector('.input-uranus');
-const placeholderUranus = inputNeptune.getAttribute('placeholder');
-
+const placeholderUranus = inputUranus.getAttribute('placeholder');  // fix: era inputNeptune
 
 inputUranus.addEventListener('input', function (event) {
-    // Eliminar cualquier carácter no numérico del valor ingresado
     event.target.value = event.target.value.replace(/[^0-9]/g, '');
-
-    // Limitar el valor a una longitud máxima de 4 dígitos
     if (event.target.value.length > 4) {
         event.target.value = event.target.value.slice(0, 4);
     }
 });
 
 inputUranus.addEventListener('focus', function (event) {
-    // Cuando el campo de entrada obtiene el enfoque, se borra el placeholder
     event.target.removeAttribute('placeholder');
+});
+
+inputUranus.addEventListener('blur', function (event) {
+    event.target.setAttribute('placeholder', placeholderUranus);
 });
 
 // Venus Function
 const btnVenus = document.querySelector('.btn-ven');
 btnVenus.addEventListener('click', calcWeightVenus);
 
-
 function calcWeightVenus() {
 
     function venus(initialWeight) {
         const totalWeight = initialWeight * gravityVenus / gravityEarth;
-        return totalWeight
+        return totalWeight;
     }
 
     const input = document.querySelector('.input-venus');
-    const value = input.value;
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+        document.getElementById('resultVenus').textContent = '---';
+        return;
+    }
     let result = venus(value);
-
     result = parseInt(result);
-    resultVenus.textContent = `${result}KG`;
+    document.getElementById('resultVenus').textContent = `${result}KG`;
 }
 
 const inputVenus = document.querySelector('.input-venus');
 const placeholderVenus = inputVenus.getAttribute('placeholder');
 
-
 inputVenus.addEventListener('input', function (event) {
-    // Eliminar cualquier carácter no numérico del valor ingresado
     event.target.value = event.target.value.replace(/[^0-9]/g, '');
-
-    // Limitar el valor a una longitud máxima de 4 dígitos
     if (event.target.value.length > 4) {
         event.target.value = event.target.value.slice(0, 4);
     }
 });
 
 inputVenus.addEventListener('focus', function (event) {
-    // Cuando el campo de entrada obtiene el enfoque, se borra el placeholder
     event.target.removeAttribute('placeholder');
+});
+
+inputVenus.addEventListener('blur', function (event) {
+    event.target.setAttribute('placeholder', placeholderVenus);
 });
 
 // Sun Function
@@ -294,63 +303,34 @@ function calcWeightsun() {
 
     function sol(initialWeight) {
         const totalWeight = initialWeight * gravitySun / gravityEarth;
-        return totalWeight
+        return totalWeight;
     }
 
     const input = document.querySelector('.input-sun');
-    const value = input.value;
+    const value = parseFloat(input.value);
+    if (isNaN(value)) {
+        document.getElementById('resultSun').textContent = '---';
+        return;
+    }
     let result = sol(value);
-
     result = parseInt(result);
-    resultSun.textContent = `${result}KG`;
+    document.getElementById('resultSun').textContent = `${result}KG`;
 }
 
 const inputSun = document.querySelector('.input-sun');
-const placeholderSun = inputVenus.getAttribute('placeholder');
-
+const placeholderSun = inputSun.getAttribute('placeholder');  // fix: era inputVenus
 
 inputSun.addEventListener('input', function (event) {
-    // Eliminar cualquier carácter no numérico del valor ingresado
     event.target.value = event.target.value.replace(/[^0-9]/g, '');
-
-    // Limitar el valor a una longitud máxima de 4 dígitos
     if (event.target.value.length > 4) {
         event.target.value = event.target.value.slice(0, 4);
     }
 });
 
 inputSun.addEventListener('focus', function (event) {
-    // Cuando el campo de entrada obtiene el enfoque, se borra el placeholder
     event.target.removeAttribute('placeholder');
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+inputSun.addEventListener('blur', function (event) {
+    event.target.setAttribute('placeholder', placeholderSun);
+});
